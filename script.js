@@ -128,3 +128,4 @@ pages.forEach((_, index) => {
                 alert("Ops! Seu dispositivo é muito pequeno para esse site, tente acessá-lo pelo computador para uma experiência melhor ;)");
             }
         }
+    }
