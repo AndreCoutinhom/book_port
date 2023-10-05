@@ -102,3 +102,23 @@ pages.forEach((_, index) => {
 
     }, (index + 1) * 200 + 2100)
 })
+
+// Verifica as dimensões da tela ao carregar a página
+        window.addEventListener('load', function () {
+            checkWindowSize();
+
+            // Adiciona um ouvinte de evento para verificar as dimensões da tela ao redimensionar
+            window.addEventListener('resize', checkWindowSize);
+        });
+
+        function checkWindowSize() {
+            // Obtém as dimensões da tela
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            // Verifica se as dimensões são menores que 1062x742 pixels
+            if (width < 1062 || height < 742) {
+                // Exibe o aviso para dispositivos muito pequenos
+                alert("Ops! Seu dispositivo é muito pequeno para esse site, tente acessá-lo pelo computador para uma experiência melhor ;)");
+            }
+        }
