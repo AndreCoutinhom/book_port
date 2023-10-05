@@ -103,6 +103,12 @@ pages.forEach((_, index) => {
     }, (index + 1) * 200 + 2100)
 })
 
+// Verifica se o usuário está em um dispositivo móvel
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // Exibe o aviso para dispositivos móveis
+            alert("Ops! Este site não é otimizado para dispositivos móveis. Por favor, acesse pelo computador para uma melhor experiência ;).");
+        } else {
+
 // Verifica as dimensões da tela ao carregar a página
         window.addEventListener('load', function () {
             checkWindowSize();
